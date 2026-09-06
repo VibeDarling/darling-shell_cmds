@@ -99,8 +99,8 @@ install(TARGETS path_helper DESTINATION libexec/darling/usr/libexec
 
 install(TARGETS chroot DESTINATION libexec/darling/usr/sbin)
 
-InstallSymlink(id libexec/darling/usr/bin/groups)
-InstallSymlink(id libexec/darling/usr/bin/whoami)
+InstallSymlink(id ${CMAKE_INSTALL_PREFIX}/libexec/darling/usr/bin/groups)
+InstallSymlink(id ${CMAKE_INSTALL_PREFIX}/libexec/darling/usr/bin/whoami)
 
 set(man1
 	alias/alias.1
