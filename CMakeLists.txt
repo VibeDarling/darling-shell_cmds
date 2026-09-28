@@ -73,6 +73,8 @@ add_darling_executable(jot jot/jot.c)
 add_darling_executable(id id/id.c)
 add_darling_executable(lastcomm lastcomm/lastcomm.c)
 add_darling_executable(logname logname/logname.c)
+add_darling_executable(login-tool login/login.c)
+set_target_properties(login-tool PROPERTIES OUTPUT_NAME login)
 add_darling_executable(path_helper path_helper/path_helper.c)
 add_darling_executable(expr ${CMAKE_CURRENT_BINARY_DIR}/expr.c)
 
@@ -91,6 +93,7 @@ install(TARGETS date echo pwd kill sleep expr test-bin
 install(TARGETS env which basename dirname apply nohup getopt true false killall mktemp
 	nice printenv printf renice script seq systime shlock id
 	tee time uname jot lastcomm logname
+	login-tool
 	users what whereis xargs find hexdump hostname yes who
 	DESTINATION libexec/darling/usr/bin)
 
